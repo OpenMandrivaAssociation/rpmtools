@@ -1,5 +1,5 @@
 %define name rpmtools
-%define version 5.2.0
+%define version 5.2.1
 %define release %mkrel 1
 
 %define group %(perl -e 'print "%_vendor" =~ /\\bmandr/i ? "System/Configuration/Packaging" : "System Environment/Base"')
@@ -61,6 +61,7 @@ standard compression methods.
 %{_bindir}/dumpdistribconf
 %{_bindir}/gendistrib
 %{_bindir}/genhdlist
+%{_bindir}/genhdlist2
 %{_bindir}/parsehdlist
 %{_bindir}/rpm2cpio.pl
 %{_bindir}/rpm2header
