@@ -1,9 +1,9 @@
 %define name rpmtools
-%define version 5.3.2
+%define version 5.3.3
 %define release %mkrel 1
 
 %define group %(perl -e 'print "%_vendor" =~ /\\bmandr/i ? "System/Configuration/Packaging" : "System Environment/Base"')
-%define rpm_version %(rpm -q --queryformat '%{VERSION}-%{RELEASE}' rpm)
+%define rpm_version %(rpm -q --queryformat '%|EPOCH?{[%{EPOCH}:%{VERSION}]}:{%{VERSION}}|' rpm)
 
 Summary:	Various RPM command-line tools
 Name:		%{name}
@@ -20,7 +20,9 @@ BuildRequires:	perl-Compress-Zlib
 BuildRequires:	perl-MDV-Packdrakeng
 BuildRequires:	perl-MDV-Distribconf
 Requires:	perl-MDV-Distribconf > 3.00
-Requires:	rpm >= %{rpm_version}
+# requires rpm used for build because librpm API is not that stable
+# (but not requiring same release, hopefully we won't break it patching rpm)
+Requires:	rpm = %{rpm_version}
 Requires:	bzip2 >= 1.0
 Conflicts:	rpmtools-compat <= 2.0
 Conflicts:	rpmtools-devel <= 2.0
