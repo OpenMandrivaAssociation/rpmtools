@@ -1,6 +1,6 @@
 %define name rpmtools
 %define version 5.3.5
-%define release %mkrel 1
+%define release %mkrel 2
 
 %define group %(perl -e 'print "%_vendor" =~ /\\bmandr/i ? "System/Configuration/Packaging" : "System Environment/Base"')
 %define rpm_version %(rpm -q --queryformat '%|EPOCH?{[%{EPOCH}:%{VERSION}]}:{%{VERSION}}|' rpm)
@@ -20,9 +20,8 @@ BuildRequires:	perl-Compress-Zlib
 BuildRequires:	perl-MDV-Packdrakeng
 BuildRequires:	perl-MDV-Distribconf
 Requires:	perl-MDV-Distribconf > 3.00
-# requires rpm used for build because librpm API is not that stable
-# (but not requiring same release, hopefully we won't break it patching rpm)
-Requires:	rpm = %{rpm_version}
+# we can now expect librpm API to be backward compatible
+Requires:	rpm >= %{rpm_version}
 Requires:	bzip2 >= 1.0
 Conflicts:	rpmtools-compat <= 2.0
 Conflicts:	rpmtools-devel <= 2.0
