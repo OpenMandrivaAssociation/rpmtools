@@ -1,6 +1,6 @@
 %define name rpmtools
 %define version 5.6
-%define release %mkrel 1
+%define release %mkrel 2
 
 %define group %(perl -e 'print "%_vendor" =~ /\\bmandr/i ? "System/Configuration/Packaging" : "System Environment/Base"')
 %define rpm_version %(rpm -q --queryformat '%|EPOCH?{[%{EPOCH}:%{VERSION}]}:{%{VERSION}}|' rpm)
