@@ -1,6 +1,6 @@
 %define name rpmtools
-%define version 5.6
-%define release %mkrel 2
+%define version 5.7
+%define release %mkrel 1
 
 %define group %(perl -e 'print "%_vendor" =~ /\\bmandr/i ? "System/Configuration/Packaging" : "System Environment/Base"')
 %define rpm_version %(rpm -q --queryformat '%|EPOCH?{[%{EPOCH}:%{VERSION}]}:{%{VERSION}}|' rpm)
@@ -71,13 +71,13 @@ by urpmi
 %defattr(-,root,root)
 %{_bindir}/dumpdistribconf
 %{_bindir}/gendistrib
-%{_bindir}/genhdlist
+%{_bindir}/genhdlist-old
 %{_bindir}/parsehdlist
 %{_bindir}/rpm2cpio.pl
 %{_bindir}/rpm2header
 %{_mandir}/man1/dumpdistribconf*
 %{_mandir}/man1/gendistrib*
-%{_mandir}/man1/genhdlist.*
+%{_mandir}/man1/genhdlist-old.*
 
 %files -n packdrake
 %defattr(-,root,root)
