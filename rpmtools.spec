@@ -1,9 +1,8 @@
 %define name rpmtools
-%define version 5.8
+%define version 5.9
 %define release %mkrel 1
 
 %define group %(perl -e 'print "%_vendor" =~ /\\bmandr/i ? "System/Configuration/Packaging" : "System Environment/Base"')
-%define rpm_version %(rpm -q --queryformat '%|EPOCH?{[%{EPOCH}:%{VERSION}]}:{%{VERSION}}|' rpm)
 
 Summary:	Various RPM command-line tools
 Name:		%{name}
@@ -15,13 +14,10 @@ Group:		%{group}
 URL:		http://cvs.mandriva.com/cgi-bin/cvsweb.cgi/soft/rpmtools
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildRequires:	perl%{?mdkversion:-devel}
-BuildRequires:	rpm-devel >= 4.2.3
 BuildRequires:	perl-Compress-Zlib
 BuildRequires:	perl-MDV-Packdrakeng
 BuildRequires:	perl-MDV-Distribconf
 Requires:	perl-MDV-Distribconf > 3.00
-# we can now expect librpm API to be backward compatible
-Requires:	rpm >= %{rpm_version}
 Requires:	bzip2 >= 1.0
 Requires:	genhdlist2
 Conflicts:	rpmtools-compat <= 2.0
@@ -55,7 +51,7 @@ by urpmi
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
-%make OPTIMIZE="%optflags"
+%make
 
 %check
 %make test
@@ -72,9 +68,6 @@ by urpmi
 %{_bindir}/dumpdistribconf
 %{_bindir}/gendistrib
 %{_bindir}/genhdlist-old
-%{_bindir}/parsehdlist
-%{_bindir}/rpm2cpio.pl
-%{_bindir}/rpm2header
 %{_mandir}/man1/dumpdistribconf*
 %{_mandir}/man1/gendistrib*
 %{_mandir}/man1/genhdlist-old.*
