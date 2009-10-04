@@ -1,6 +1,6 @@
 %define name rpmtools
 %define version 5.9
-%define release %mkrel 1
+%define release %mkrel 2
 
 %define group %(perl -e 'print "%_vendor" =~ /\\bmandr/i ? "System/Configuration/Packaging" : "System Environment/Base"')
 
@@ -14,7 +14,6 @@ Group:		%{group}
 URL:		http://cvs.mandriva.com/cgi-bin/cvsweb.cgi/soft/rpmtools
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildRequires:	perl%{?mdkversion:-devel}
-BuildRequires:	perl-Compress-Zlib
 BuildRequires:	perl-MDV-Packdrakeng
 BuildRequires:	perl-MDV-Distribconf
 Requires:	perl-MDV-Distribconf > 3.00
