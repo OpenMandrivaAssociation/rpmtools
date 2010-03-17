@@ -1,6 +1,6 @@
 %define name rpmtools
 %define version 5.9
-%define release %mkrel 2
+%define release %mkrel 3
 
 %define group %(perl -e 'print "%_vendor" =~ /\\bmandr/i ? "System/Configuration/Packaging" : "System Environment/Base"')
 
