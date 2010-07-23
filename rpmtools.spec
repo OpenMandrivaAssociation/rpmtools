@@ -11,7 +11,7 @@ Release:	%{release}
 Source0:	%{name}-%{version}.tar.bz2
 License:	GPL
 Group:		%{group}
-URL:		http://cvs.mandriva.com/cgi-bin/cvsweb.cgi/soft/rpmtools
+URL:		http://svn.mandriva.com/cgi-bin/viewvc.cgi/soft/rpm/rpmtools/
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildRequires:	perl%{?mdkversion:-devel}
 BuildRequires:	perl-MDV-Packdrakeng
