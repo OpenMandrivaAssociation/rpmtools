@@ -1,6 +1,6 @@
 %define name rpmtools
-%define version 5.9
-%define release %mkrel 4
+%define version 6.0
+%define release %mkrel 1
 
 %define group %(perl -e 'print "%_vendor" =~ /\\bmandr/i ? "System/Configuration/Packaging" : "System Environment/Base"')
 
@@ -8,7 +8,7 @@ Summary:	Various RPM command-line tools
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
-Source0:	%{name}-%{version}.tar.bz2
+Source0:	%{name}-%{version}.tar.xz
 License:	GPL
 Group:		%{group}
 URL:		http://svn.mandriva.com/cgi-bin/viewvc.cgi/soft/rpm/rpmtools/
