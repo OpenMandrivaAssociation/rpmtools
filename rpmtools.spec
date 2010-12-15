@@ -1,19 +1,13 @@
-%define name rpmtools
-%define version 6.0
-%define release %mkrel 1
-
-%define group %(perl -e 'print "%_vendor" =~ /\\bmandr/i ? "System/Configuration/Packaging" : "System Environment/Base"')
-
 Summary:	Various RPM command-line tools
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:		rpmtools
+Version:	6.0
+Release:	%mkrel 1
 Source0:	%{name}-%{version}.tar.xz
-License:	GPL
-Group:		%{group}
+License:	GPLv2+
+Group:		System/Configuration/Packaging
 URL:		http://svn.mandriva.com/cgi-bin/viewvc.cgi/soft/rpm/rpmtools/
 BuildRoot:	%{_tmppath}/%{name}-buildroot
-BuildRequires:	perl%{?mdkversion:-devel}
+BuildRequires:	perl-devel
 BuildRequires:	perl-MDV-Packdrakeng
 BuildRequires:	perl-MDV-Distribconf
 Requires:	perl-MDV-Distribconf > 3.00
@@ -26,22 +20,20 @@ Conflicts:	packdrake < 5.0.26
 %description
 Various tools needed by urpmi and drakxtools for handling rpm files.
 
-%package -n packdrake
-Group:		%{group}
+%package -n	packdrake
 Summary:	A simple Archive Extractor/Builder
 Conflicts:	rpmtools <= 5.0.25
 Provides:	perl(packdrake)
 
-%description -n packdrake
+%description -n	packdrake
 Packdrake is a simple indexed archive builder and extractor using
 standard compression methods.
 
-%package -n genhdlist2
-Group:		%{group}
+%package -n	genhdlist2
 Summary:	Tool to generate urpmi metadata (media_info/*)
 Conflicts:	rpmtools <= 5.4
 
-%description -n genhdlist2
+%description -n	genhdlist2
 genhdlist2 generates hdlist.cz, synthesis.hdlist.cz and *.xml.lzma files used
 by urpmi
 
@@ -49,18 +41,18 @@ by urpmi
 %setup -q
 
 %build
-%__perl Makefile.PL INSTALLDIRS=vendor
+perl Makefile.PL INSTALLDIRS=vendor
 %make
 
 %check
 %make test
 
 %install
-%__rm -rf %{buildroot}
+rm -rf %{buildroot}
 %makeinstall_std
 
 %clean
-%__rm -rf %{buildroot}
+rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
