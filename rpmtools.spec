@@ -11,7 +11,7 @@ BuildRequires:	perl-devel
 BuildRequires:	perl-MDV-Packdrakeng
 BuildRequires:	perl-MDV-Distribconf
 Requires:	perl-MDV-Distribconf > 3.00
-Requires:	bzip2 >= 1.0
+Requires:	xz
 Requires:	genhdlist2
 Conflicts:	rpmtools-compat <= 2.0
 Conflicts:	rpmtools-devel <= 2.0
