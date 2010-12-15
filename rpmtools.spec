@@ -21,6 +21,7 @@ Conflicts:	packdrake < 5.0.26
 Various tools needed by urpmi and drakxtools for handling rpm files.
 
 %package -n	packdrake
+Group:		%{group}
 Summary:	A simple Archive Extractor/Builder
 Conflicts:	rpmtools <= 5.0.25
 Provides:	perl(packdrake)
@@ -30,6 +31,7 @@ Packdrake is a simple indexed archive builder and extractor using
 standard compression methods.
 
 %package -n	genhdlist2
+Group:		%{group}
 Summary:	Tool to generate urpmi metadata (media_info/*)
 Conflicts:	rpmtools <= 5.4
 
