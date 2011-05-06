@@ -1,7 +1,7 @@
 Summary:	Various RPM command-line tools
 Name:		rpmtools
 Version:	6.0
-Release:	%mkrel 2
+Release:	%mkrel 3
 Source0:	%{name}-%{version}.tar.xz
 License:	GPLv2+
 Group:		System/Configuration/Packaging
@@ -13,6 +13,14 @@ BuildRequires:	perl-MDV-Distribconf
 Requires:	perl-MDV-Distribconf > 3.00
 Requires:	xz
 Requires:	genhdlist2
+Requires:	perl(File::Find)
+Requires:	perl(File::Path)
+Requires:	perl(File::Temp)
+Requires:	perl(Getopt::Long)
+Requires:	perl(MDV::Distribconf::Build)
+Requires:	perl(Pod::Usage)
+Requires:	perl(URPM)
+Requires:	perl(URPM::Build)
 Conflicts:	rpmtools-compat <= 2.0
 Conflicts:	rpmtools-devel <= 2.0
 Conflicts:	packdrake < 5.0.26
