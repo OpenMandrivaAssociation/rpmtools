@@ -1,8 +1,9 @@
 Summary:	Various RPM command-line tools
 Name:		rpmtools
 Version:	6.0
-Release:	%mkrel 3
+Release:	%mkrel 4
 Source0:	%{name}-%{version}.tar.xz
+Patch0:		rpmtools-6.0-locale.patch
 License:	GPLv2+
 Group:		System/Configuration/Packaging
 URL:		http://svn.mandriva.com/cgi-bin/viewvc.cgi/soft/rpm/rpmtools/
@@ -49,6 +50,7 @@ by urpmi
 
 %prep
 %setup -q
+%patch0 -p0
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
