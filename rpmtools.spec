@@ -1,7 +1,7 @@
 Summary:	Various RPM command-line tools
 Name:		rpmtools
-Version:	6.0
-Release:	%mkrel 4
+Version:	6.1
+Release:	%mkrel 1
 Source0:	%{name}-%{version}.tar.xz
 Patch0:		rpmtools-6.0-locale.patch
 License:	GPLv2+
@@ -85,4 +85,3 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %{_bindir}/genhdlist2
 %{_mandir}/man1/genhdlist2*
-
