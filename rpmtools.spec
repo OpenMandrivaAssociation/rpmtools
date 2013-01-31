@@ -7,6 +7,9 @@ Source0:	%{name}-%{version}.tar.xz
 License:	GPLv2+
 Group:		System/Configuration/Packaging
 URL:		http://svn.mandriva.com/cgi-bin/viewvc.cgi/soft/rpm/rpmtools/
+# (tpg) from Mageia
+# http://svnweb.mageia.org/soft?view=revision&revision=6438
+Patch0:		rpmtools-6.1-use-external-gzip.patch
 BuildRequires:	perl-devel
 BuildRequires:	perl-MDV-Packdrakeng
 BuildRequires:	perl-MDV-Distribconf
@@ -50,7 +53,7 @@ by urpmi
 
 %prep
 %setup -q
-#apply_patches
+%apply_patches
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
