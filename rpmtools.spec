@@ -1,9 +1,8 @@
 Summary:	Various RPM command-line tools
 Name:		rpmtools
 Version:	6.1
-Release:	5
+Release:	6
 Source0:	%{name}-%{version}.tar.xz
-#Patch0:		rpmtools-6.1-genhdlist2.patch
 License:	GPLv2+
 Group:		System/Configuration/Packaging
 URL:		http://svn.mandriva.com/cgi-bin/viewvc.cgi/soft/rpm/rpmtools/
