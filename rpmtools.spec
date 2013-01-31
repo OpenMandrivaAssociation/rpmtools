@@ -10,6 +10,9 @@ URL:		http://svn.mandriva.com/cgi-bin/viewvc.cgi/soft/rpm/rpmtools/
 # (tpg) from Mageia
 # http://svnweb.mageia.org/soft?view=revision&revision=6438
 Patch0:		rpmtools-6.1-use-external-gzip.patch
+# (tpg) http://svn.mandriva.com/cgi-bin/viewvc.cgi/soft?view=revision&revision=271508
+# fix it :)
+Patch1:		rpmtools-6.1-really-use-text-option-for-compression.patch
 BuildRequires:	perl-devel
 BuildRequires:	perl-MDV-Packdrakeng
 BuildRequires:	perl-MDV-Distribconf
