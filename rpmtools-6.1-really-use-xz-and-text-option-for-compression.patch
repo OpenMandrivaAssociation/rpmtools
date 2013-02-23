@@ -1,0 +1,24 @@
+diff -Naur rpmtools-6.1/genhdlist2 rpmtools-6.1.tpg/genhdlist2
+--- rpmtools-6.1/genhdlist2	2011-05-31 11:20:48.000000000 +0000
++++ rpmtools-6.1.tpg/genhdlist2	2013-02-23 11:17:25.030087831 +0000
+@@ -15,9 +15,9 @@
+ 
+ sub main() {
+     my %options = (
+-	synthesis_filter => '.cz:gzip -9',
++	synthesis_filter => '.cz:xz -5 --text',
+ 	xml_info => 'auto',
+-	xml_info_filter => '.lzma:lzma -5',
++	xml_info_filter => '.lzma:xz -5 --text',
+ 	versioned => 'auto'
+     );
+ 
+@@ -588,7 +588,7 @@
+ =item B<--synthesis-filter SUFFIX:FILTER>
+ 
+ Use SUFFIX for filename suffix and filter through FILTER for compression.
+-By default genhdlist2 will use '.cz:gzip -9'.
++By default genhdlist2 will use '.cz:xz -5'.
+ 
+ =item B<--xml-info>
+ 
