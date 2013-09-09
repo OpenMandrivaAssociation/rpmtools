@@ -18,6 +18,7 @@ BuildRequires:	perl-MDV-Distribconf
 BuildArch:	noarch
 Requires:	perl-MDV-Distribconf > 3.00
 Requires:	xz
+Requires:	gzip
 Requires:	genhdlist2
 Requires:	perl(File::Find)
 Requires:	perl(File::Path)
