@@ -1,11 +1,11 @@
 Summary:	Various RPM command-line tools
 Name:		rpmtools
 Version:	6.1
-Release:	9
+Release:	10
 Source0:	%{name}-%{version}.tar.xz
 License:	GPLv2+
 Group:		System/Configuration/Packaging
-URL:		http://svn.mandriva.com/cgi-bin/viewvc.cgi/soft/rpm/rpmtools/
+URL:		https://abf.rosalinux.ru/omv_software/rpmtools
 # (tpg) from Mageia
 # http://svnweb.mageia.org/soft?view=revision&revision=6438
 Patch0:		rpmtools-6.1-use-external-gzip.patch
@@ -18,6 +18,7 @@ BuildRequires:	perl-MDV-Distribconf
 BuildArch:	noarch
 Requires:	perl-MDV-Distribconf > 3.00
 Requires:	xz
+Requires:	gzip
 Requires:	genhdlist2
 Requires:	perl(File::Find)
 Requires:	perl(File::Path)
