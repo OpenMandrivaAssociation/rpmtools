@@ -1,7 +1,7 @@
 Summary:	Various RPM command-line tools
 Name:		rpmtools
 Version:	6.1
-Release:	14
+Release:	15
 Source0:	%{name}-%{version}.tar.xz
 License:	GPLv2+
 Group:		System/Configuration/Packaging
