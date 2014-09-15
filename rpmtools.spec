@@ -1,7 +1,7 @@
 Summary:	Various RPM command-line tools
 Name:		rpmtools
 Version:	6.1
-Release:	16
+Release:	17
 Source0:	%{name}-%{version}.tar.xz
 License:	GPLv2+
 Group:		System/Configuration/Packaging
@@ -12,6 +12,7 @@ Patch0:		rpmtools-6.1-use-external-gzip.patch
 # (tpg) http://svn.mandriva.com/cgi-bin/viewvc.cgi/soft?view=revision&revision=271508
 # fix it :)
 Patch1:		rpmtools-6.1-really-use-xz-and-text-option-for-compression.patch
+Patch2:		genhdlist2-merge-option.patch
 BuildRequires:	perl-devel
 BuildRequires:	perl-MDV-Packdrakeng
 BuildRequires:	perl-MDV-Distribconf
