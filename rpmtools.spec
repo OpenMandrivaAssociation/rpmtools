@@ -5,7 +5,7 @@ Release:	1
 Source0:	%{name}-%{version}.tar.xz
 License:	GPLv2+
 Group:		System/Configuration/Packaging
-URL:		https://abf.io/omv_software/rpmtools
+URL:		https://abf.io/software/rpmtools
 BuildRequires:	perl-devel
 BuildRequires:	perl-MDV-Packdrakeng
 BuildRequires:	perl-MDV-Distribconf
