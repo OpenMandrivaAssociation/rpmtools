@@ -1,5 +1,2 @@
-removed_sources:
-  rpmtools-6.1.tar.xz: e494dbae968a0aa4a9b7dcdce30db3f94fcd21b0
-  rpmtools-6.2.tar.xz: ea0ff8b51ee0b93f5e7d1655cfe62aadfa47e83d
 sources:
-  rpmtools-6.2.tar.xz: c42826b4e4c702bd56880f54566c5e51a569fce8
+  rpmtools-6.3.tar.xz: 8ff14087562f855fc5f95fdfa0885b7ed7845bb8
