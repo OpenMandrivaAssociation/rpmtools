@@ -1,6 +1,6 @@
 Summary:	Various RPM command-line tools
 Name:		rpmtools
-Version:	6.3
+Version:	7.00.1
 Release:	1
 Source0:	%{name}-%{version}.tar.xz
 License:	GPLv2+
@@ -50,7 +50,6 @@ by urpmi
 
 %prep
 %setup -q
-%apply_patches
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -65,10 +64,8 @@ perl Makefile.PL INSTALLDIRS=vendor
 %files
 %{_bindir}/dumpdistribconf
 %{_bindir}/gendistrib
-%{_bindir}/genhdlist-old
 %{_mandir}/man1/dumpdistribconf*
 %{_mandir}/man1/gendistrib*
-%{_mandir}/man1/genhdlist-old.*
 
 %files -n packdrake
 %{_bindir}/packdrake
