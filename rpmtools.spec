@@ -1,8 +1,9 @@
 Summary:	Various RPM command-line tools
 Name:		rpmtools
 Version:	7.00.1
-Release:	2
+Release:	3
 Source0:	%{name}-%{version}.tar.xz
+Patch0:		rpmtools-7.00.1-fix-genhdlist2-syntax.patch
 License:	GPLv2+
 Group:		System/Configuration/Packaging
 URL:		https://abf.io/software/rpmtools
@@ -50,6 +51,7 @@ by urpmi
 
 %prep
 %setup -q
+%apply_patches
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
