@@ -1,10 +1,8 @@
 Summary:	Various RPM command-line tools
 Name:		rpmtools
-Version:	7.00.1
-Release:	5
+Version:	7.00.2
+Release:	1
 Source0:	%{name}-%{version}.tar.xz
-Patch0:		rpmtools-7.00.1-fix-genhdlist2-syntax.patch
-Patch1:		rpmtools-7.00.1-add-use-XML-LibXML.patch
 License:	GPLv2+
 Group:		System/Configuration/Packaging
 URL:		https://abf.io/software/rpmtools
@@ -45,6 +43,10 @@ standard compression methods.
 Group:		%{group}
 Summary:	Tool to generate urpmi metadata (media_info/*)
 Conflicts:	rpmtools <= 5.4
+Requires:	perl(Getopt::Long)
+Requires:	perl(List::Util)
+Requires:	perl(MDV::Packdrakeng)
+Requires:	perl(URPM)
 Requires:	perl(XML::LibXML)
 
 %description -n	genhdlist2
