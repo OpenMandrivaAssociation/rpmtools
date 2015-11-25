@@ -1,0 +1,11 @@
+diff -Naur rpmtools-7.00.1/genhdlist2 rpmtools-7.00.1.tpg/genhdlist2
+--- rpmtools-7.00.1/genhdlist2	2015-11-25 19:43:27.998063536 +0000
++++ rpmtools-7.00.1.tpg/genhdlist2	2015-11-25 19:43:59.235915014 +0000
+@@ -9,6 +9,7 @@
+ use List::Util 'any';
+ use MDV::Packdrakeng;
+ use Getopt::Long;
++use XML::LibXML;
+ use strict;
+ 
+ main();
