@@ -1,7 +1,7 @@
 Summary:	Various RPM command-line tools
 Name:		rpmtools
 Version:	7.00.1
-Release:	3
+Release:	4
 Source0:	%{name}-%{version}.tar.xz
 Patch0:		rpmtools-7.00.1-fix-genhdlist2-syntax.patch
 License:	GPLv2+
@@ -44,6 +44,7 @@ standard compression methods.
 Group:		%{group}
 Summary:	Tool to generate urpmi metadata (media_info/*)
 Conflicts:	rpmtools <= 5.4
+Requires:	perl(XML::LibXML)
 
 %description -n	genhdlist2
 genhdlist2 generates hdlist.cz, synthesis.hdlist.cz and *.xml.lzma files used
