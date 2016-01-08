@@ -14,6 +14,7 @@ BuildRequires:	perl(ExtUtils::MM_Unix)
 BuildRequires:	perl(ExtUtils::Manifest)
 BuildRequires:	perl(ExtUtils::Command)
 BuildRequires:	perl(File::Glob)
+BuildRequires:	perl(ExtUtils::Install)
 BuildArch:	noarch
 Requires:	perl-MDV-Distribconf > 3.00
 Requires:	xz
