@@ -1,12 +1,12 @@
 Summary:	Various RPM command-line tools
 Name:		rpmtools
 Version:	7.00.2
-Release:	6
+Release:	7
 Source0:	%{name}-%{version}.tar.xz
 License:	GPLv2+
 Group:		System/Configuration/Packaging
 URL:		https://abf.io/software/rpmtools
-BuildRequires:	perl-devel
+BuildRequires:	perl-devel >= 5.20.3-1.2
 BuildRequires:	perl-MDV-Packdrakeng
 BuildRequires:	perl-MDV-Distribconf
 BuildArch:	noarch
