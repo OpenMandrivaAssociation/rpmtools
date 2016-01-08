@@ -19,6 +19,7 @@ BuildRequires:	perl(ExtUtils::Install)
 #tests
 BuildRequires:	perl(Test::Harness)
 BuildRequires:	perl(TAP::Formatter::File)
+BuildRequires:	perl(Digest::MD5)
 BuildArch:	noarch
 Requires:	perl-MDV-Distribconf > 3.00
 Requires:	xz
