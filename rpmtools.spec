@@ -1,25 +1,27 @@
 Summary:	Various RPM command-line tools
 Name:		rpmtools
 Version:	7.00.2
-Release:	7
+Release:	8
 Source0:	%{name}-%{version}.tar.xz
 License:	GPLv2+
 Group:		System/Configuration/Packaging
 URL:		https://abf.io/software/rpmtools
-BuildRequires:	perl-devel >= 5.20.3-1.2
+BuildRequires:	perl-devel
 BuildRequires:	perl-MDV-Packdrakeng
 BuildRequires:	perl-MDV-Distribconf
-BuildRequires:	perl(DynaLoader) >= 5.20.3-1.2
-BuildRequires:	perl(ExtUtils::MM_Unix)
-BuildRequires:	perl(ExtUtils::Manifest)
-BuildRequires:	perl(ExtUtils::Command)
-BuildRequires:	perl(ExtUtils::Command::MM)
-BuildRequires:	perl(File::Glob)
-BuildRequires:	perl(ExtUtils::Install)
-#tests
-BuildRequires:	perl(Test::Harness)
-BuildRequires:	perl(TAP::Formatter::File)
-BuildRequires:	perl(Digest::MD5)
+
+# splitted perl is not yet ready so revert some changes
+#BuildRequires:	perl(DynaLoader) >= 5.20.3-1.2
+#BuildRequires:	perl(ExtUtils::MM_Unix)
+#BuildRequires:	perl(ExtUtils::Manifest)
+#BuildRequires:	perl(ExtUtils::Command)
+#BuildRequires:	perl(ExtUtils::Command::MM)
+#BuildRequires:	perl(File::Glob)
+#BuildRequires:	perl(ExtUtils::Install)
+#BuildRequires:	perl(Test::Harness)
+#BuildRequires:	perl(TAP::Formatter::File)
+#BuildRequires:	perl(Digest::MD5)
+
 BuildArch:	noarch
 Requires:	perl-MDV-Distribconf > 3.00
 Requires:	xz
