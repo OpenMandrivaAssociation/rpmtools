@@ -12,6 +12,7 @@ BuildRequires:	perl-MDV-Distribconf
 BuildRequires:	perl(DynaLoader) >= 5.20.3-1.2
 BuildRequires:	perl(ExtUtils::MM_Unix)
 BuildRequires:	perl(ExtUtils::Manifest)
+BuildRequires:	perl(ExtUtils::Command)
 BuildArch:	noarch
 Requires:	perl-MDV-Distribconf > 3.00
 Requires:	xz
