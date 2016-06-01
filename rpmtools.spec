@@ -1,7 +1,7 @@
 Summary:	Various RPM command-line tools
 Name:		rpmtools
 Version:	7.00.2
-Release:	8
+Release:	9
 Source0:	%{name}-%{version}.tar.xz
 License:	GPLv2+
 Group:		System/Configuration/Packaging
@@ -11,16 +11,16 @@ BuildRequires:	perl-MDV-Packdrakeng
 BuildRequires:	perl-MDV-Distribconf
 
 # splitted perl is not yet ready so revert some changes
-#BuildRequires:	perl(DynaLoader) >= 5.20.3-1.2
-#BuildRequires:	perl(ExtUtils::MM_Unix)
-#BuildRequires:	perl(ExtUtils::Manifest)
-#BuildRequires:	perl(ExtUtils::Command)
-#BuildRequires:	perl(ExtUtils::Command::MM)
-#BuildRequires:	perl(File::Glob)
-#BuildRequires:	perl(ExtUtils::Install)
-#BuildRequires:	perl(Test::Harness)
-#BuildRequires:	perl(TAP::Formatter::File)
-#BuildRequires:	perl(Digest::MD5)
+BuildRequires:	perl(DynaLoader) >= 2:5.20.3-4
+BuildRequires:	perl(ExtUtils::MM_Unix) >= 2:5.20.3-4
+BuildRequires:	perl(ExtUtils::Manifest)
+BuildRequires:	perl(ExtUtils::Command)
+BuildRequires:	perl(ExtUtils::Command::MM)
+BuildRequires:	perl(File::Glob) >= 2:5.20.3-4
+BuildRequires:	perl(ExtUtils::Install)
+BuildRequires:	perl(Test::Harness)
+BuildRequires:	perl(TAP::Formatter::File)
+BuildRequires:	perl(Digest::MD5)
 
 BuildArch:	noarch
 Requires:	perl-MDV-Distribconf > 3.00
@@ -28,12 +28,12 @@ Requires:	xz
 Requires:	gzip
 Requires:	genhdlist2
 Requires:	perl(File::Find)
-Requires:	perl(File::Path)
+Requires:	perl(File::Path) >= 2:5.20.3-4
 Requires:	perl(File::Temp)
 Requires:	perl(Getopt::Long)
 Requires:	perl(MDV::Distribconf::Build)
 Requires:	perl(Pod::Usage)
-Requires:	perl(URPM)
+Requires:	perl(URPM) >= 4.65.1-4
 Requires:	perl(URPM::Build)
 Conflicts:	rpmtools-compat <= 2.0
 Conflicts:	rpmtools-devel <= 2.0
@@ -59,12 +59,12 @@ Conflicts:	rpmtools <= 5.4
 Requires:	perl(Getopt::Long)
 Requires:	perl(List::Util)
 Requires:	perl(MDV::Packdrakeng)
-Requires:	perl(URPM)
+Requires:	perl(URPM) >= 4.65.1-4
 Requires:	perl(XML::LibXML)
 
 %description -n	genhdlist2
 genhdlist2 generates hdlist.cz, synthesis.hdlist.cz and *.xml.lzma files used
-by urpmi
+by urpmi.
 
 %prep
 %setup -q
