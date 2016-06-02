@@ -6,17 +6,17 @@ Source0:	%{name}-%{version}.tar.xz
 License:	GPLv2+
 Group:		System/Configuration/Packaging
 URL:		https://abf.io/software/rpmtools
-BuildRequires:	perl-devel
+BuildRequires:	perl-devel >= 2:5.20.3-4
 BuildRequires:	perl-MDV-Packdrakeng
 BuildRequires:	perl-MDV-Distribconf
 
 # splitted perl is not yet ready so revert some changes
-BuildRequires:	perl(DynaLoader) >= 2:5.20.3-4
-BuildRequires:	perl(ExtUtils::MM_Unix) >= 2:5.20.3-4
+BuildRequires:	perl(DynaLoader)
+BuildRequires:	perl(ExtUtils::MM_Unix)
 BuildRequires:	perl(ExtUtils::Manifest)
 BuildRequires:	perl(ExtUtils::Command)
 BuildRequires:	perl(ExtUtils::Command::MM)
-BuildRequires:	perl(File::Glob) >= 2:5.20.3-4
+BuildRequires:	perl(File::Glob)
 BuildRequires:	perl(ExtUtils::Install)
 BuildRequires:	perl(Test::Harness)
 BuildRequires:	perl(TAP::Formatter::File)
@@ -28,7 +28,7 @@ Requires:	xz
 Requires:	gzip
 Requires:	genhdlist2
 Requires:	perl(File::Find)
-Requires:	perl(File::Path) >= 2:5.20.3-4
+Requires:	perl(File::Path)
 Requires:	perl(File::Temp)
 Requires:	perl(Getopt::Long)
 Requires:	perl(MDV::Distribconf::Build)
